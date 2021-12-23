@@ -22,7 +22,8 @@ galleryEl.addEventListener("click", openModal);
 
 function openModal(e) {  
   e.preventDefault();
-    let gallery = new SimpleLightbox('.gallery a');
+  console.log(e.target.alt);
+  let gallery = new SimpleLightbox('.gallery a', {  /*options */captions:'true', captionsData:'e.target.alt', captionDelay:250, captionPosition:'bottom' });
 gallery.on('show.simplelightbox', function () {
 	// do something…
 });
