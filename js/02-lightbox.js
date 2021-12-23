@@ -18,13 +18,6 @@ const galleryMarkUp = galleryItems.map(({preview, original, description})=> {
 
 galleryEl.insertAdjacentHTML("afterbegin", galleryMarkUp);
 
-galleryEl.addEventListener("click", openModal);
 
-function openModal(e) {  
-  e.preventDefault();
-  console.log(e.target.alt);
   let gallery = new SimpleLightbox('.gallery a', {  /*options */captions:'true', captionsData: 'alt', captionDelay:250, captionPosition:'bottom' });
-gallery.on('show.simplelightbox', function () {
-	// do something…
-});
-}
+
